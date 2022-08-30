@@ -8,3 +8,5 @@ Technologies used:
 - CSS
 - Bootstrap
 - Javascript
+
+![Screenshot](img/p1.png)
