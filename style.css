@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+/*-----------------------common for all section-----------------*/
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+section{
+    padding: 100px 0;
+}
+
+/*------------navbar--------------------*/
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 20px 0;
+    font-family: 'Ubuntu', sans-serif;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: #000;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo h2::first-letter {
+    font-size: 70px;
+    color: #eb3852;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: #eb3852;
+}
+/*------------------menu-btn---------------------------*/
+.menu-btn{
+    color: #000;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+/*-----------------Home section---------------------*/
+.home{
+    display: flex;
+    background-color: white;
+    height: 100vh;
+    color: #000;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home .max-width{
+  width: 100%;
+  display: flex;
+}
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content button{
+    height: 65px;
+    width: 200px;
+    border: none;
+    outline: none;
+    background: #eb3852;
+    color: #000;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 20px 0;
+}
+.home .home-content button:hover{
+    border: 2px solid #eb3852;
+    color: #eb3852;
+    background: #fff;
+}
+
+
+.sideImg {
+    height: 600px;
+    width: 600px;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    right: 100px;
+    top: calc(50% - 400px);
+    border-radius: 50%;
+    background: linear-gradient(60deg, transparent 50%, #eb3852 50%);
+    border: 2px solid #eb3852;;
+    transform: rotateZ(30deg) scale(1);
+    cursor: pointer;
+    transition: 2s;
+}
+
+.sideImg:hover {
+    transform: rotateZ(150deg) scale(0.70);
+}
+
+.sideImg img {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    transform: rotateZ(-30deg);
+    transition: 1.4s;
+}
+
+.sideImg:hover img {
+    transform: rotateZ(-180deg);
+}
+
+
+/*------------------Media query-------------------------*/
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px) {
+    .max-width{
+        padding: 0 50px;
+    }
+    .sideImg{
+        display: none;
+    }
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: white;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+}
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+    .sideImg{
+        display: none;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
+}
